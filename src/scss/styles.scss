@@ -1,0 +1,17 @@
+// ==========================================================================
+// Free One Page Restaurant HTML and CSS Template - http://getbase.org
+// ==========================================================================
+
+// Variables and Colors
+@import "styles/variables-colors";
+
+// Import Base
+@import "node_modules/getbase/scss/base";
+
+// Website Styles
+@import "styles/components";
+@import "styles/header";
+@import "styles/footer";
+
+// Import Base Helpers
+@import "node_modules/getbase/scss/base/helpers";

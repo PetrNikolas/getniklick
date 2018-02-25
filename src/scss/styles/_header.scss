@@ -1,0 +1,267 @@
+// Banner
+.banner {
+  background-color: #fbfbfb;
+  background-image: url("../../img/home.jpeg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  height: 670px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  min-height: 670px;
+  background: $white;
+  opacity: .7;
+}
+
+.banner-inner {
+  text-align: left;
+  width: (9 / 12) * 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+// Banner Heading
+.banner-lead {
+  margin-top: 35px;
+  @include breakpoint(l) {
+    @include font-size(70);
+    @include line-height(90);
+  }
+  @include breakpoint(xl) {
+    @include font-size(80);
+    @include line-height(100);
+  }
+}
+
+.banner-lead-1,
+.banner-lead-2 {
+  @include animation;
+  @extend .fade-in;
+  @include breakpoint(m) {
+    display: block;
+  }
+}
+
+.banner-lead-1 { animation-delay: .4s; }
+.banner-lead-2 { animation-delay: .8s; }
+
+// Banner Buttons
+.banner-buttons {
+  padding-bottom: 20px;
+  @include animation;
+  animation-delay: 1.4s;
+  @extend .fade-in;
+  @include breakpoint(m) {
+    padding-bottom: 120px;
+  }
+
+  .button {
+    margin: 10px 0;
+    @include breakpoint(m) {
+      margin: 0 4px;
+    }
+  }
+}
+
+// Header
+.header {
+  padding-bottom: 15px;
+  position: relative;
+  @include breakpoint(m) {
+    background: transparent;
+    opacity: .9;
+    padding-bottom: 20px;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    @include background-alpha($white, 20%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.header-inner {
+  @include breakpoint(m) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  @include breakpoint(l) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Logo
+.logo {
+  height: 95px;
+  float: left;
+  transition: all .2s;
+  margin-top: 10px;
+  color: $darkest-grey;
+  border-bottom: none;
+  text-decoration: none;
+  font-size: 35px;
+
+  &:hover { 
+    opacity: .8;
+    border-bottom: none;
+    text-decoration: none;
+  }
+
+  span:first-child {
+    margin-top: 30px;
+    position: absolute;
+  }
+
+  .brand_color {
+    color: $gold;
+  }
+}
+
+// Hamburger Button for Mobile
+.navigation-toggle-label {
+  @include font-size(16);
+  line-height: normal;
+  border: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  float: right;
+  position: relative;
+  height: 20px;
+  width: 25px;
+  background: transparent;
+  margin-top: 50px;
+  margin-right: 10px;
+  color: $white;
+  cursor: pointer;
+  @include breakpoint(m) {
+    display: none;
+  }
+
+  &:before, &:after, .navigation-toggle-label-inner:before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: $white;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+  }
+
+  &:after { transform: translate3d(0, 7px, 0); }
+
+  .navigation-toggle-label-inner:before { transform: translate3d(0, 14px, 0); }
+}
+
+// Hamburger Button - Active
+.navigation-toggle-checkbox[type=checkbox]:checked + .navigation-toggle-label {
+  &:before { transform: translate3d(0, 7px, 0) rotate(-225deg); }
+
+  &:after { opacity: 0; }
+
+  .navigation-toggle-label-inner:before { transform: translate3d(0, 7px, 0) rotate(45deg); }
+}
+
+// Navigation
+.navigation {
+  transition: all .2s;
+  opacity: 0;
+  max-height: 1px;
+  overflow: hidden;  
+  clear: both;
+  @include breakpoint(m) {
+    max-height: none;
+    opacity: 1;
+    float: right;
+    margin-top: 0;
+    clear: none;
+  }
+}
+
+.navigation-toggle-checkbox[type=checkbox]:checked  + .navigation-toggle-label + .navigation {
+  opacity: 1;
+  max-height: 400px;
+}
+
+// Navigation Menu
+.navigation-menu {
+  @include font-size(18);
+  @include line-height(24);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include breakpoint(m) {
+    @include font-size(16);
+    @include line-height(22);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .navigation-item {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    @include breakpoint(m) {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    & > a {
+      font-family: $base-heading-font-family;
+      margin: 0;
+      display: block;
+      color: $darkest-grey;
+      text-decoration: none;
+      position: relative;
+      transition: all .2s;
+      @include breakpoint(m) {
+        margin: 0;
+        color: $darkest-grey;
+        padding: 50px 2px 0 2px;
+        position: relative;
+        &:before {
+          transition: all .2s;
+          width: 0px;
+          height: 4px;
+          background: $gold;
+          content: "";
+          display: block;
+          top: 0;
+          left: 50%;
+          position: absolute;
+        }
+      }
+      @include breakpoint(l) {
+        padding: 50px 15px 0 15px;
+      }
+
+      &:hover, &.active {
+        color: $gold;
+        @include breakpoint(m) {
+          color: $darkest-grey;
+
+          &:before {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
