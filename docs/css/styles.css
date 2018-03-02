@@ -1584,16 +1584,8 @@ blockquote {
 
 .banner {
   background-color: #fbfbfb;
-  background-image: url("../../img/home.jpeg");
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   text-align: center;
-  height: 670px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat; }
+  height: 670px; }
 
 .overlay {
   position: absolute;
