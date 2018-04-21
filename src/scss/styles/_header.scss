@@ -1,6 +1,5 @@
-// Banner
 .banner {
-  background-color: #fbfbfb;
+  background-color: $base-bg-color;
   text-align: center;
   height: 670px;
 }
@@ -10,7 +9,7 @@
   width: 100%;
   min-height: 670px;
   background: $white;
-  opacity: .7;
+  opacity: .3;
 }
 
 .banner-inner {
@@ -20,8 +19,8 @@
   padding-top: 60px;
 }
 
-// Banner Heading
 .banner-lead {
+  color: $white;
   margin-top: 35px;
   @include breakpoint(l) {
     @include font-size(70);
@@ -45,7 +44,6 @@
 .banner-lead-1 { animation-delay: .4s; }
 .banner-lead-2 { animation-delay: .8s; }
 
-// Banner Buttons
 .banner-buttons {
   padding-bottom: 20px;
   @include animation;
@@ -63,7 +61,6 @@
   }
 }
 
-// Header
 .header {
   padding-bottom: 15px;
   position: relative;
@@ -94,21 +91,21 @@
   }
 }
 
-// Logo
 .logo {
   height: 95px;
   float: left;
   transition: all .2s;
   margin-top: 10px;
-  color: $darkest-grey;
+  color: $white;
   border-bottom: none;
   text-decoration: none;
   font-size: 35px;
 
   &:hover { 
-    opacity: .8;
+    opacity: 1;
     border-bottom: none;
     text-decoration: none;
+    color: $white;
   }
 
   span:first-child {
@@ -118,142 +115,5 @@
 
   .brand_color {
     color: $gold;
-  }
-}
-
-// Hamburger Button for Mobile
-.navigation-toggle-label {
-  @include font-size(16);
-  line-height: normal;
-  border: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: block;
-  float: right;
-  position: relative;
-  height: 20px;
-  width: 25px;
-  background: transparent;
-  margin-top: 50px;
-  margin-right: 10px;
-  color: $white;
-  cursor: pointer;
-  @include breakpoint(m) {
-    display: none;
-  }
-
-  &:before, &:after, .navigation-toggle-label-inner:before {
-    content: "";
-    width: 25px;
-    height: 1px;
-    background: $white;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .5s;
-  }
-
-  &:after { transform: translate3d(0, 7px, 0); }
-
-  .navigation-toggle-label-inner:before { transform: translate3d(0, 14px, 0); }
-}
-
-// Hamburger Button - Active
-.navigation-toggle-checkbox[type=checkbox]:checked + .navigation-toggle-label {
-  &:before { transform: translate3d(0, 7px, 0) rotate(-225deg); }
-
-  &:after { opacity: 0; }
-
-  .navigation-toggle-label-inner:before { transform: translate3d(0, 7px, 0) rotate(45deg); }
-}
-
-// Navigation
-.navigation {
-  transition: all .2s;
-  opacity: 0;
-  max-height: 1px;
-  overflow: hidden;  
-  clear: both;
-  @include breakpoint(m) {
-    max-height: none;
-    opacity: 1;
-    float: right;
-    margin-top: 0;
-    clear: none;
-  }
-}
-
-.navigation-toggle-checkbox[type=checkbox]:checked  + .navigation-toggle-label + .navigation {
-  opacity: 1;
-  max-height: 400px;
-}
-
-// Navigation Menu
-.navigation-menu {
-  @include font-size(18);
-  @include line-height(24);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  @include breakpoint(m) {
-    @include font-size(16);
-    @include line-height(22);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-  }
-
-  .navigation-item {
-    display: block;
-    text-align: left;
-    margin-top: 10px;
-    @include breakpoint(m) {
-      display: inline-block;
-      margin: 0 5px;
-    }
-
-    & > a {
-      font-family: $base-heading-font-family;
-      margin: 0;
-      display: block;
-      color: $darkest-grey;
-      text-decoration: none;
-      position: relative;
-      transition: all .2s;
-      @include breakpoint(m) {
-        margin: 0;
-        color: $darkest-grey;
-        padding: 50px 2px 0 2px;
-        position: relative;
-        &:before {
-          transition: all .2s;
-          width: 0px;
-          height: 4px;
-          background: $gold;
-          content: "";
-          display: block;
-          top: 0;
-          left: 50%;
-          position: absolute;
-        }
-      }
-      @include breakpoint(l) {
-        padding: 50px 15px 0 15px;
-      }
-
-      &:hover, &.active {
-        color: $gold;
-        @include breakpoint(m) {
-          color: $darkest-grey;
-
-          &:before {
-            left: 0;
-            width: 100%;
-          }
-        }
-      }
-    }
   }
 }

@@ -1,37 +1,15 @@
-// Footer
 .footer {
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
   text-align: center;
   @include breakpoint(l) {
-    padding-top: 40px;
+    padding-top: 0px;
     padding-bottom: 40px;
   }
 
-  a, p {
+  p {
     color: $base-font-color;
     font-size: 13px;
-  }
-
-  .soc, .fa {
-    font-size: 25px;
-    padding-right: 17px;
-
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-
-  .fa-facebook {
-    color: #3b5998;
-  }
-
-  .fa-twitter {
-    color: #1da1f2;
-  }
-
-  .fa-linkedin {
-    color: #0084bf;
   }
 }
 

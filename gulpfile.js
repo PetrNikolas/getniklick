@@ -1,5 +1,5 @@
 // Base Gulp File
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),

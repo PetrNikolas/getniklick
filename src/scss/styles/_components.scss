@@ -1,22 +1,16 @@
-// Headings
-.heading {
-  text-align: center;
-}
-
-.heading-secondary {
-  color: $white;
-}
-
 h2, h3, h4, h5, h6 {
   text-transform: lowercase;
 }
 
-// Links
 a {
   text-decoration: none;
+  
+  &:hover, &:focus {
+    color: $base-link-color;
+    border-bottom: 1px solid $base-link-color;
+  }
 }
 
-// Buttons
 .button {
   color: $white;
   padding: 1em 3em;
@@ -48,16 +42,7 @@ a {
   border: 1px solid $second-link-color;
   @include background-alpha($second-link-color, 85%);
 
-  &:hover { @include background-alpha($second-link-color, 70%); }
-}
-
-// Feature Box
-.feature-box {
-  padding: 20px 10px;
-  color: $base-font-color;
-  @include breakpoint(m) {
-    padding: 50px 60px 50px 60px;
-  }
+  &:hover { @include background-alpha($second-link-color, 60%); }
 }
 
 // General Content
@@ -67,101 +52,11 @@ a {
   padding-bottom: 70px;
 }
 
-.content-block.no_padding_top {
-  padding-top: 0;
-}
-
-// Card
-.card {
-  background: #fff;
-  max-width: 940px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 8px 24px 0 rgba(0,0,0,.1);
-  box-shadow: 0 8px 24px 0 rgba(0,0,0,.1);
-  padding: 64px 80px;
-  margin: 0 auto;
-
-  h2 {
-    color: $base-h2-color;
-  }
-
-  h2, h3 {
-    padding-bottom: 20px;
-  }
-}
-
-.padding_bottom {
-  padding-bottom: 150px;
-}
-
-.padding_bottom_40 {
-  padding-bottom: 40px;
-}
-
 .quick-menu-block {
-  background: #fbfbfb;
   text-align: center;
 
   img {
     max-height: 70px;
     margin: 0 auto;
   }
-}
-
-// Utils
-.grey_bg {
-  background: #fbfbfb;
-}
-
-.margin_left {
-  margin-left: 25%;
-}
-
-.padding_top {
-  padding-top: 27px;
-}
-
-.medium_img {
-  max-width: 400px;
-}
-
-.big_img {
-  max-width: 500px;
-}
-
-// Download Block
-#download {
-  text-align: center;
-  height: 430px;
-}
-
-// About
-#about {
-  .card {
-    min-height: 300Px;
-
-    .heading {
-      text-align: left;
-    }
-  }
-
-  .col-4-l {
-    min-height: 350px;
-
-    a {
-      border: 1px solid $base-link-color;
-      padding: 3px 13px;
-
-      &:hover, &:active, &:focus {
-        color: $white;
-        background: $gold;
-      }
-    }
-  }
-}
-
-// Said about
-blockquote {
-  color: $mid-grey;
 }
