@@ -1553,7 +1553,7 @@ a {
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
-  @media only screen and (min-width: 740px) {
+  @media only screen and (min-width: 980px) {
     .banner-lead-1,
     .banner-lead-2 {
       display: block; } }
@@ -1630,6 +1630,15 @@ a {
     position: absolute; }
   .logo .brand_color {
     color: #fecb2f; }
+
+.home-img {
+  position: absolute;
+  right: 200px;
+  top: 200px;
+  width: 300px; }
+  @media only screen and (max-width: 992px) {
+    .home-img {
+      display: none; } }
 
 .footer {
   padding-top: 0px;

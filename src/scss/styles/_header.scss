@@ -36,7 +36,7 @@
 .banner-lead-2 {
   @include animation;
   @extend .fade-in;
-  @include breakpoint(m) {
+  @include breakpoint(l) {
     display: block;
   }
 }
@@ -115,5 +115,16 @@
 
   .brand_color {
     color: $gold;
+  }
+}
+
+.home-img {
+  position: absolute;
+  right: 200px;
+  top: 200px;
+  width: 300px;
+
+  @media only screen and (max-width: 992px) {
+    display: none;
   }
 }
