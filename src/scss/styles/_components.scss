@@ -45,6 +45,23 @@ a {
   &:hover { @include background-alpha($second-link-color, 60%); }
 }
 
+// Helpers
+.full-size {
+  img {
+    max-height: 100% !important;
+    max-width: 200px !important;
+    box-shadow: 7px 7px 20px $soft-grey !important;
+  }
+}
+
+.light-grey-bg {
+  background-color: $soft-grey !important;
+}
+
+.pt-90 {
+  padding-top: 90px !important;
+}
+
 // General Content
 .content-block {
   background: #fff;
