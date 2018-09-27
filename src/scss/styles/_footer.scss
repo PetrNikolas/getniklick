@@ -1,9 +1,9 @@
 .footer {
-  padding-top: 0px;
+  padding-top: 40px;
   padding-bottom: 20px;
   text-align: center;
   @include breakpoint(l) {
-    padding-top: 0px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 

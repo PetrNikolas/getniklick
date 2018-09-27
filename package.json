@@ -1,6 +1,6 @@
 {
   "name": "niklick-landing-page",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "scripts": {
     "serve": "gulp",
     "sass": "gulp sass",
